@@ -1,0 +1,113 @@
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<style type="text/css">
+body
+{
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: black;
+}
+.form
+{
+border-radius: 5%;
+padding-top:45px;
+padding-left:35px;
+padding-right:35px;
+background-color: lightgreen;
+border:2px
+width : 177px;
+text-align:center ;
+}
+input:hover
+{
+background-color:white;
+}
+form
+{
+text-align : center ;
+}
+input
+{
+background-color: lightblue;
+}
+.g:active
+{
+padding: 7px;
+background-color:white;
+}
+</style>
+</head>
+<body>
+<div class="form">
+<form name="forms" >
+<h1 style="text-align:center ; background-color:black ; color:white; width=10px ;">calculator</h1>
+<input type="text" name="text" style="background-color= white ;">
+<br>
+<br>
+<div class="row">
+<div class="col-4 col-xl-4 col-lg-4 col-sm-4"><input type="button"  value="length"  onclick="forms.text.value=((forms.text.value).length)"></div>
+<div class="col-4 col-xl-4 col-lg-4 col-sm-4"><input type="button"  value=" 1 " onclick="forms.text.value +='1' "></div>
+<div class="col-4 col-xl-4 col-lg-4 col-sm-4"><input type="button"  value=" 2 "  onclick="forms.text.value+='2' "></div>
+</div><br>
+<div class="row">
+<div class="col-4 col-xl-4 col-lg-4 col-sm-4"><input type="button"  value=" 3 "  onclick="forms.text.value+='3' "></div>
+<div class="col-4 col-xl-4 col-lg-4 col-sm-4"><input type="button"  value=" 4 "  onclick="forms.text.value+='4' "></div>
+<div class="col-4 col-xl-4 col-lg-4 col-sm-4"><input type="button"  value=" 5 "  onclick="forms.text.value+='5' "></div>
+</div><br>
+<div class="row">
+<div class="col-4 col-xl-4 col-lg-4 col-sm-4"><input type="button"  value=" 6 "  onclick="forms.text.value+='6' "></div>
+<div class="col-4 col-xl-4 col-lg-4 col-sm-4"><input type="button"  value=" 7 "  onclick="forms.text.value+='7' "></div>
+<div class="col-4 col-xl-4 col-lg-4 col-sm-4"><input type="button"  value=" 8 "  onclick="forms.text.value+='8' "></div>
+</div><br>
+<div class="row">
+<div class="col-4 col-xl-4 col-lg-4 col-sm-4"><input type="button"  value=" 9 "  onclick="forms.text.value+='9' "></div>
+<div class="col-4 col-xl-4 col-lg-4 col-sm-4"><input type="button"  value=" 0 "  onclick="forms.text.value+='0' "></div>
+<div class="col-4 col-xl-4 col-lg-4 col-sm-4"><input type="button"  value=" + "  onclick="forms.text.value= myfunc()"></div>
+</div><br>
+<div class="row">
+<div class="col-4 col-xl-4 col-lg-4 col-sm-4"><input type="button"  value=" - "  onclick="forms.text.value=myfunc()"></div>
+<div class="col-4 col-xl-4 col-lg-4 col-sm-4"><input type="button"  value="  / "  onclick="forms.text.value=myfunc()"></div>
+<div class="col-4 col-xl-4 col-lg-4 col-sm-4"><input type="button"  value=" *  "  onclick="forms.text.value=myfunc() "></div>
+</div><br>
+<div class="row">
+<div class="col-4 col-xl-4 col-lg-4 col-sm-4"><input type="button"  value=" % "  onclick="forms.text.value=func()" id="d"></div>
+<div class="col-4 col-xl-4 col-lg-4 col-sm-4"><input type="button"  value=" = "  onclick="forms.text.value=eval(forms.text.value) " class="g" ></div>
+<div class="col-4 col-xl-4 col-lg-4 col-sm-4"><input type="button"  value=" ^ "  onclick="forms.text.value=myfunc()"></div>
+</div><br>
+<div class="row">
+<div class="col-4 col-xl-4 col-lg-4 col-sm-4"><input type="button"  value="  . "  onclick="forms.text.value+='.' "></div>
+<div class="col-4 col-xl-4 col-lg-4 col-sm-4"><input type="button"  value=" C " style="width=10px"  onclick="forms.text.value=' ' " ></div>
+<div class="col-4 col-xl-4 col-lg-4 col-sm-4"><input type="button"  value=" B "  onclick="forms.text.value= forms.text.value.slice(0,-1) " ></div>
+</div><br>
+</form>
+</div>
+<script type="text/javascript">
+function func()
+{
+var a=getElementById("d").innerHTML
+var l=(a).length;
+var x=(a).slice(l-1);
+if(x=="+" || x== "-" || x== "*" ||  x== "/" || x== "%" ||  x== "^" )
+{
+alert("invalid enter");
+}
+else
+{
+a+="+";
+a+="-";
+a+="/";
+a+="*";
+a+="%";
+a+="^";
+}
+}
+</script>
+</body>
+</html>
